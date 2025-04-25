@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+ <html lang="en">
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudiumOS - Your Customizable Workspace</title>
@@ -8,408 +8,468 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary-color: #2979FF;
-      --primary-color-dark: #216CCC;
-      --secondary-color: #64B5F6;
-      --text-color-primary: #212121;
-      --text-color-secondary: #555555;
-      --background-color: #f5f5f5;
-      --background-alt-color: #ffffff;
-      --accent-color: #FFAB40;
-    }
+  :root {
+  --primary-color: #2979FF;
+  --primary-color-dark: #216CCC;
+  --secondary-color: #64B5F6;
+  --text-color-primary: #212121;
+  --text-color-secondary: #555555;
+  --background-color: #f5f5f5;
+  --background-alt-color: #ffffff;
+  --accent-color: #FFAB40;
+  }
+ 
 
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--background-color);
-      color: var(--text-color-primary);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+  body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+ 
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+  .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  }
+ 
 
-    header {
-      background-color: var(--background-alt-color);
-      padding: 25px 0;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+  header {
+  background-color: var(--background-alt-color);
+  padding: 25px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  }
+ 
 
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+ 
 
-    .logo {
-      height: 70px;
-    }
+  .logo {
+  height: 70px;
+  }
+ 
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
+  nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  }
+ 
 
-    nav ul li {
-      margin-left: 30px;
-    }
+  nav ul li {
+  margin-left: 30px;
+  }
+ 
 
-    nav ul li a {
-      text-decoration: none;
-      color: var(--text-color-primary);
-      font-weight: 500;
-      transition: color 0.3s ease;
-      font-size: 1.1rem;
-    }
+  nav ul li a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  }
+ 
 
-    nav ul li a:hover {
-      color: var(--primary-color);
-    }
+  nav ul li a:hover {
+  color: var(--primary-color);
+  }
+ 
 
-    .button {
-      display: inline-block;
-      padding: 14px 30px;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: 500;
-      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-      border: none;
-      cursor: pointer;
-      font-size: 1.1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+  .button {
+  display: inline-block;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+ 
 
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+  .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+ 
 
-    .launch-button {
-      background-color: transparent;
-      color: var(--primary-color);
-      border: 2px solid var(--primary-color);
-    }
+  .launch-button {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  }
+ 
 
-    .launch-button:hover {
-      background-color: var(--primary-color);
-      color: var(--background-alt-color);
-    }
+  .launch-button:hover {
+  background-color: var(--primary-color);
+  color: var(--background-alt-color);
+  }
+ 
 
-    .primary-button {
-      background-color: var(--primary-color);
-      color: var(--background-alt-color);
-    }
+  .primary-button {
+  background-color: var(--primary-color);
+  color: var(--background-alt-color);
+  }
+ 
 
-    .primary-button:hover {
-      background-color: var(--primary-color-dark);
-    }
+  .primary-button:hover {
+  background-color: var(--primary-color-dark);
+  }
+ 
 
-    #hero {
-      padding: 100px 0;
-      background-color: var(--background-alt-color);
-      overflow: hidden;
-    }
+  #hero {
+  padding: 100px 0;
+  background-color: var(--background-alt-color);
+  overflow: hidden;
+  }
+ 
 
-    #hero .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+  #hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+ 
 
-    .hero-content {
-      flex: 1;
-      padding-right: 50px;
-      animation: fadeIn 1s ease-out, slideInLeft 1s ease-out;
-      opacity: 0;
-      transform: translateX(-50px);
-      animation-fill-mode: forwards;
-    }
+  .hero-content {
+  flex: 1;
+  padding-right: 50px;
+  animation: fadeIn 1s ease-out, slideInLeft 1s ease-out;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation-fill-mode: forwards;
+  }
+ 
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+  }
+  @keyframes slideInLeft {
+  from { transform: translateX(-50px); }
+  to { transform: translateX(0); }
+  }
+ 
 
-    @keyframes slideInLeft {
-      from { transform: translateX(-50px); }
-      to { transform: translateX(0); }
-    }
+  .hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  color: var(--text-color-primary);
+  }
+ 
 
-    .hero-content h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-      line-height: 1.2;
-      color: var(--text-color-primary);
-    }
+  .hero-content .tagline {
+  font-size: 1.3rem;
+  color: var(--text-color-secondary);
+  margin-bottom: 40px;
+  max-width: 550px;
+  }
+ 
 
-    .hero-content .tagline {
-      font-size: 1.3rem;
-      color: var(--text-color-secondary);
-      margin-bottom: 40px;
-      max-width: 550px;
-    }
+  .hero-image {
+  flex: 1;
+  text-align: center;
+  animation: fadeIn 1s ease-out, slideInRight 1s ease-out;
+  opacity: 0;
+  transform: translateX(50px);
+  animation-fill-mode: forwards;
+  }
+  @keyframes slideInRight {
+  from { transform: translateX(50px); }
+  to { transform: translateX(0); }
+  }
+ 
 
-    .hero-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: fadeIn 1s ease-out, slideInRight 1s ease-out;
-      opacity: 0;
-      transform: translateX(50px);
-      animation-fill-mode: forwards;
-      height: 100%;
-    }
+  .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  image-rendering: auto;
+  }
+ 
 
-    @keyframes slideInRight {
-      from { transform: translateX(50px); }
-      to { transform: translateX(0); }
-    }
+  #features {
+  padding: 100px 0;
+  background-color: var(--background-color);
+  }
+ 
 
-    .hero-image img {
-      width: 100%;
-      height: auto;
-      max-height: 600px;
-      object-fit: contain;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      image-rendering: auto;
-    }
+  #features h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-color-primary);
+  text-align: center;
+  margin-bottom: 60px;
+  }
+ 
 
-    #features {
-      padding: 100px 0;
-      background-color: var(--background-color);
-    }
+  .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  }
+ 
 
-    #features h2 {
-      font-size: 3rem;
-      font-weight: 600;
-      color: var(--text-color-primary);
-      text-align: center;
-      margin-bottom: 60px;
-    }
+  .feature-item {
+  background-color: var(--background-alt-color);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+ 
 
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-    }
+  .feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+ 
 
-    .feature-item {
-      background-color: var(--background-alt-color);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  .feature-item img {
+  height: 60px;
+  margin-bottom: 25px;
+  }
+ 
 
-    .feature-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
+  .feature-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color-primary);
+  margin-bottom: 15px;
+  }
+ 
 
-    .feature-item img {
-      height: 60px;
-      margin-bottom: 25px;
-    }
+  .feature-item p {
+  color: var(--text-color-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  }
+ 
 
-    .feature-item h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--text-color-primary);
-      margin-bottom: 15px;
-    }
+  #about-us {
+  padding: 100px 0;
+  background-color: var(--background-alt-color);
+  }
+ 
 
-    .feature-item p {
-      color: var(--text-color-secondary);
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
+  #about-us h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-color-primary);
+  text-align: center;
+  margin-bottom: 60px;
+  }
+ 
 
-    #about-us {
-      padding: 100px 0;
-      background-color: var(--background-alt-color);
-    }
+  #about-us p {
+  color: var(--text-color-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  }
+ 
 
-    #about-us h2 {
-      font-size: 3rem;
-      font-weight: 600;
-      color: var(--text-color-primary);
-      text-align: center;
-      margin-bottom: 60px;
-    }
+  footer {
+  background-color: var(--background-alt-color);
+  padding: 30px 0;
+  text-align: center;
+  color: var(--text-color-secondary);
+  font-size: 0.9rem;
+  border-top: 1px solid #e0e0e0;
+  }
+ 
 
-    #about-us p {
-      color: var(--text-color-secondary);
-      font-size: 1.1rem;
-      line-height: 1.8;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+  .container {
+  padding: 0 15px;
+  }
+ 
 
-    footer {
-      background-color: var(--background-alt-color);
-      padding: 30px 0;
-      text-align: center;
-      color: var(--text-color-secondary);
-      font-size: 0.9rem;
-      border-top: 1px solid #e0e0e0;
-    }
+  header .container {
+  flex-direction: column;
+  text-align: center;
+  }
+ 
 
-    /* Mobile */
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 15px;
-      }
+  .logo {
+  margin-bottom: 20px;
+  }
+ 
 
-      header .container {
-        flex-direction: column;
-        text-align: center;
-      }
+  nav ul {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+  }
+ 
 
-      .logo {
-        margin-bottom: 20px;
-      }
+  nav ul li {
+  margin-left: 0;
+  margin-bottom: 15px;
+  }
+ 
 
-      nav ul {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        margin-top: 20px;
-      }
+  .hero .container {
+  flex-direction: column;
+  text-align: center;
+  }
+ 
 
-      nav ul li {
-        margin-left: 0;
-        margin-bottom: 15px;
-      }
+  .hero-content {
+  padding-right: 0;
+  margin-bottom: 40px;
+  }
+ 
 
-      .hero .container {
-        flex-direction: column;
-        text-align: center;
-      }
+  .hero-content h1 {
+  font-size: 3.5rem;
+  }
+ 
 
-      .hero-content {
-        padding-right: 0;
-        margin-bottom: 40px;
-      }
+  .hero-content .tagline{
+  font-size: 1.2rem;
+  }
+ 
 
-      .hero-content h1 {
-        font-size: 3.5rem;
-      }
+  .hero-image {
+  order: -1;
+  }
+ 
 
-      .hero-content .tagline {
-        font-size: 1.2rem;
-      }
+  .features-grid {
+  grid-template-columns: 1fr;
+  }
+ 
 
-      .hero-image {
-        order: -1;
-      }
+  .feature-item {
+  padding: 30px;
+  }
+ 
 
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .feature-item {
-        padding: 30px;
-      }
-    }
+  .showcase-slider img {
+  width: 100%;
+  }
+  .subscribe-form {
+  flex-direction: column;
+  }
+  .subscribe-form input[type="email"]{
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 10px;
+  }
+  .subscribe-form button{
+  border-radius: 0 0 8px 8px;
+  }
+  }
   </style>
-</head>
-<body>
+ </head>
+ <body>
   <header>
-    <div class="container">
-      <img src="https://i.ibb.co/d4MHPynT/studiumos-logo-2.png" alt="StudiumOS Logo" class="logo">
-      <nav>
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about-us">About Us</a></li>
-        </ul>
-      </nav>
-      <a href="https://studiumos.github.io/" class="button launch-button">Launch StudiumOS</a>
-    </div>
+  <div class="container">
+  <img src="https://i.ibb.co/d4MHPynT/studiumos-logo-2.png" alt="StudiumOS Logo" class="logo">
+  <nav>
+  <ul>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#about-us">About Us</a></li>
+  </ul>
+  </nav>
+  <a href="https://studiumos.github.io/" class="button launch-button">Launch StudiumOS</a>
+  </div>
   </header>
+ 
 
   <section id="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Your Workspace, Your Way.</h1>
-        <p class="tagline">Experience a new level of productivity with StudiumOS, the browser-based suite that adapts to you.</p>
-        <a href="https://studiumos.github.io/" class="button primary-button">Launch StudiumOS</a>
-      </div>
-      <div class="hero-image">
-        <img src="https://i.ibb.co/4Zr6fJY/mockup.png" alt="StudiumOS Interface Mockup">
-      </div>
-    </div>
+  <div class="container">
+  <div class="hero-content">
+  <h1>Your Workspace, Your Way.</h1>
+  <p class="tagline">Experience a new level of productivity with StudiumOS, the browser-based suite that adapts to you.</p>
+  <a href="https://studiumos.github.io/" class="button primary-button">Launch StudiumOS</a>
+  </div>
+  <div class="hero-image">
+  <img src="https://i.ibb.co/mCWLBSXy/Chat-GPT-Image-Apr-24-2025-at-05-08-06-PM.png" alt="StudiumOS Interface Mockup">
+  </div>
+  </div>
   </section>
+ 
 
   <section id="features">
-    <div class="container">
-      <h2>Key Features</h2>
-      <div class="features-grid">
-        <div class="feature-item">
-          <img src="icon-responsive.svg" alt="Responsive Design Icon">
-          <h3>Responsive Design</h3>
-          <p>Seamlessly adapts to any screen size, providing a consistent experience across all your devices.</p>
-        </div>
-        <div class="feature-item">
-          <img src="icon-widgets.svg" alt="Modular Widgets Icon">
-          <h3>Modular Widgets</h3>
-          <p>Enhance your productivity with a variety of customizable widgets like timers, to-do lists, and more.</p>
-        </div>
-        <div class="feature-item">
-          <img src="icon-customize.svg" alt="Customizable UI Icon">
-          <h3>Customizable UI</h3>
-          <p>Personalize your workspace with light/dark themes, accent colors, and custom backgrounds.</p>
-        </div>
-        <div class="feature-item">
-          <img src="icon-interactive.svg" alt="Interactive Elements Icon">
-          <h3>Interactive Elements</h3>
-          <p>Enjoy intuitive interactions with drag-and-drop widgets and smooth animations.</p>
-        </div>
-        <div class="feature-item">
-          <img src="icon-persistent.svg" alt="Persistent State Icon">
-          <h3>Persistent State</h3>
-          <p>Keep your important information saved within the session for a seamless workflow.</p>
-        </div>
-        <div class="feature-item">
-          <img src="icon-more.svg" alt="More Features Icon">
-          <h3>And More...</h3>
-          <p>Discover even more features designed to boost your efficiency and organization.</p>
-        </div>
-      </div>
-    </div>
+  <div class="container">
+  <h2>Key Features</h2>
+  <div class="features-grid">
+  <div class="feature-item">
+  <img src="icon-responsive.svg" alt="Responsive Design Icon">
+  <h3>Responsive Design</h3>
+  <p>Seamlessly adapts to any screen size, providing a consistent experience across all your devices.</p>
+  </div>
+  <div class="feature-item">
+  <img src="icon-widgets.svg" alt="Modular Widgets Icon">
+  <h3>Modular Widgets</h3>
+  <p>Enhance your productivity with a variety of customizable widgets like timers, to-do lists, and more.</p>
+  </div>
+  <div class="feature-item">
+  <img src="icon-customize.svg" alt="Customizable UI Icon">
+  <h3>Customizable UI</h3>
+  <p>Personalize your workspace with light/dark themes, accent colors, and custom backgrounds.</p>
+  </div>
+  <div class="feature-item">
+  <img src="icon-interactive.svg" alt="Interactive Elements Icon">
+  <h3>Interactive Elements</h3>
+  <p>Enjoy intuitive interactions with drag-and-drop widgets and smooth animations.</p>
+  </div>
+  <div class="feature-item">
+  <img src="icon-persistent.svg" alt="Persistent State Icon">
+  <h3>Persistent State</h3>
+  <p>Keep your important information saved within the session for a seamless workflow.</p>
+  </div>
+  <div class="feature-item">
+  <img src="icon-more.svg" alt="More Features Icon">
+  <h3>And More...</h3>
+  <p>Discover even more features designed to boost your efficiency and organization.</p>
+  </div>
+  </div>
+  </div>
   </section>
+ 
 
   <section id="about-us">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>
-        StudiumOS is your ultimate productivity companion, designed to streamline the way students, professionals, and creators work and learn. This all-in-one suite brings together a powerful collection of tools—including countdown timers, to-do lists, sticky notes, a scientific calculator, unit converters, and even a fun game widget—to keep you organized and focused.
-        With its sleek, customizable interface, StudiumOS adapts to your unique workflow. Arrange and resize widgets to suit your needs, switch between light and dark modes, and personalize your workspace with custom backgrounds and accent colors. Whether you're tackling assignments, managing projects, or sketching ideas, StudiumOS offers a seamless, distraction-free experience.
-        StudiumOS is built with a passion for efficiency and is continuously evolving with new features and enhancements. Join our community to boost your productivity and help shape the future of this innovative platform!
-      </p>
-    </div>
+  <div class="container">
+  <h2>About Us</h2>
+  <p>
+  StudiumOS is your ultimate productivity companion, designed to streamline the way students, professionals, and creators work and learn. This all-in-one suite brings together a powerful collection of tools—including countdown timers, to-do lists, sticky notes, a scientific calculator, unit converters, and even a fun game widget—to keep you organized and focused.
+  With its sleek, customizable interface, StudiumOS adapts to your unique workflow. Arrange and resize widgets to suit your needs, switch between light and dark modes, and personalize your workspace with custom backgrounds and accent colors. Whether you're tackling assignments, managing projects, or sketching ideas, StudiumOS offers a seamless, distraction-free experience.
+  StudiumOS is built with a passion for efficiency and is continuously evolving with new features and enhancements. Join our community to boost your productivity and help shape the future of this innovative platform!
+  </p>
+  </div>
   </section>
+ 
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 StudiumOS. All rights reserved.</p>
-    </div>
+  <div class="container">
+  <p>&copy; 2025 StudiumOS. All rights reserved.</p>
+  </div>
   </footer>
-</body>
-</html>
+ </body>
+ </html>
